@@ -1,9 +1,48 @@
 <script lang="ts">
-	// your script goes here
+	import type { Task } from '$lib/DBTypes';
+	let Tasks: Task[] = $state([]);
 </script>
 
-<style>
-	/* your styles go here */
-</style>
+<main class="container-fluid">
+	<h1>Sprint Planning</h1>
 
-<!-- markup (zero or more items) goes here -->
+	<div class="SprintControls">
+		<button>Back</button>
+		<div>
+			<p>Sprint</p>
+			<p>1</p>
+		</div>
+		<button>Next</button>
+	</div>
+	<div class="content">
+		<div class="NewTask">
+			<button>Add</button>
+			<input type="text" placeholder="Task Name" />
+		</div>
+
+		<div class="TaskList">
+			{#each Tasks as Task}{/each}
+		</div>
+	</div>
+</main>
+
+<style>
+	h1 {
+		text-align: center;
+	}
+
+	.content {
+		display: grid;
+	}
+
+	.SprintControls {
+		display: flex;
+		justify-content: center;
+		gap: 1rem;
+		text-align: center;
+	}
+
+	.SprintControls p {
+		margin: 0;
+	}
+</style>

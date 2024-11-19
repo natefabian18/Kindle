@@ -5,6 +5,10 @@
 <main class="container">
 	<div class="card">
 		<h1>Welcome to Kindle</h1>
+		<div class="flex">
+			<a class="button" href="/SprintPlan">Sprint Planning</a>
+			<a class="button" href="/BurnDown">Burn Down</a>
+		</div>
 	</div>
 </main>
 
@@ -32,5 +36,29 @@
 		background-color: #111927;
 		background-image: radial-gradient(at 47% 33%, hsl(162, 77%, 40%) 0, transparent 59%),
 			radial-gradient(at 82% 65%, hsl(218.33, 100%, 49%) 0, transparent 55%);
+	}
+
+	.flex {
+		display: flex;
+		gap: 1em;
+	}
+
+	.flex > * {
+		flex-grow: 1;
+	}
+
+	.button {
+		border-radius: 12px;
+		border: 1px solid transparent;
+		padding: 0.6em 1.2em;
+		font-size: 1em;
+		font-weight: 500;
+		font-family: inherit;
+		background-color: rgba(0, 0, 0, 0.5);
+		cursor: pointer;
+		transition: border-color 0.25s;
+		color: white;
+		text-decoration: none;
+		text-align: center;
 	}
 </style>
